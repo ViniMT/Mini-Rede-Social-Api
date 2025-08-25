@@ -19,6 +19,10 @@ export class UsuariosService {
     return await this.repository.findOne(id);
   }
 
+  async findOneByEmailPass(email: string, pass: string) {
+    return await this.repository.findOneByEmailPass(email, pass);
+  }
+
   async update(id: number, updateUsuarioDto: UpdateUsuarioDto) {
     return await this.repository.update(id, updateUsuarioDto);
   }
