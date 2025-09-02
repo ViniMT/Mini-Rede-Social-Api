@@ -30,7 +30,7 @@ export class UsuariosController {
     return this.usuariosService.findOne(+id);
   }
 
-  @Get(':email/pass')
+  @Get(':email/:pass')
   findOneByEmailPass(
     @Param('email') email: string,
     @Param('pass') pass: string,
